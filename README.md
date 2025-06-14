@@ -44,7 +44,7 @@ ding_call_back
 go run cmd/main.go
 ```
 
-服务将在8080端口启动（可通过环境变量PORT修改）。
+服务将在3014端口启动（可通过环境变量PORT修改）。
 
 ### Docker部署
 
@@ -69,7 +69,7 @@ docker-compose -f docker-compose-ding_call_back.yml up -d
 首先，注册配置信息：
 
 ```bash
-curl --location 'http://localhost:8080/ding/config' \
+curl --location 'http://localhost:3014/ding/config' \
 --header 'Content-Type: application/json' \
 --data '{
   "url": "http://example.com/api/callback",
@@ -122,7 +122,7 @@ curl --location 'http://localhost:8080/ding/config' \
 #### 配置注册
 
 ```bash
-curl --location 'http://localhost:8080/ding/config' \
+curl --location 'http://localhost:3014/ding/config' \
 --header 'Content-Type: application/json' \
 --data '{
   "url": "http://example.com/api/callback",
@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS ding_callback_configs (
 
 - AES密钥长度必须为43个字符
 - 如果提供了URL，解密后的数据将以POST方式转发到该URL
-- 服务默认监听8080端口，可通过环境变量PORT修改
+- 服务默认监听3014端口，可通过环境变量PORT修改
 - 配置永久存储在PostgreSQL数据库中，不会自动过期
 
 ## 环境变量配置
