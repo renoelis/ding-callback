@@ -1,0 +1,54 @@
+# 编译后的二进制文件和可执行文件
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go语言特定的文件
+/bin/
+/pkg/
+
+# 日志文件
+*.log
+
+# 本地环境配置
+.env
+.env.local
+
+# IDE和编辑器文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Go的依赖管理目录
+/vendor/
+
+# 编译生成的文件
+/dist/
+/build/
+
+# 本地测试
+/testdata/
+
+# 覆盖率报告
+coverage.txt
+coverage.html
+
+# 自动生成的代码
+*_gen.go
+*_string.go
+
+# 部署和配置文件（可选，根据需要修改）
+# config.yaml
+# config.json
+
+# 临时文件
+*.tmp 
+DingTalk-Callback-Crypto/
+.cursor/

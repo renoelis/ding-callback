@@ -1,0 +1,26 @@
+services:
+  ding-callback-service:
+    image: ding-callback-service:latest
+    container_name: ding-callback-service
+    ports:
+      - "3014:3014"
+    restart: always
+    environment:
+      - PORT=3014
+      - DB_HOST=120.46.147.53
+      - DB_PORT=5432
+      - DB_NAME=pro_db
+      - DB_USER=renoelis
+      - DB_PASSWORD=renoelis02@gmail.com
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
+    networks:
+      - proxy_net
+
+networks:
+  proxy_net:
+    external: true
+    name: api-proxy_proxy_net 
