@@ -22,7 +22,7 @@ type DBConfig struct {
 
 // 从环境变量获取数据库配置
 func getDBConfigFromEnv() *DBConfig {
-	host := getEnvOrDefault("DB_HOST", "120.46.147.53")
+	host := getEnvOrDefault("DB_HOST", "")
 	portStr := getEnvOrDefault("DB_PORT", "5432")
 	port, err := strconv.Atoi(portStr)
 	if err != nil {
@@ -33,9 +33,9 @@ func getDBConfigFromEnv() *DBConfig {
 	return &DBConfig{
 		Host:     host,
 		Port:     port,
-		Database: getEnvOrDefault("DB_NAME", "pro_db"),
-		User:     getEnvOrDefault("DB_USER", "renoelis"),
-		Password: getEnvOrDefault("DB_PASSWORD", "renoelis02@gmail.com"),
+		Database: getEnvOrDefault("DB_NAME", ""),
+		User:     getEnvOrDefault("DB_USER", ""),
+		Password: getEnvOrDefault("DB_PASSWORD", ""),
 	}
 }
 
