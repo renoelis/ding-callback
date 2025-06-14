@@ -150,11 +150,11 @@ curl --location 'http://localhost:3014/ding/config' \
 服务使用PostgreSQL数据库存储配置信息。数据库连接信息：
 
 ```
-Host: 120.46.147.53
+Host: 需要按实际修改
 Port: 5432
-Database: pro_db
-User: renoelis
-Password: renoelis02@gmail.com
+Database: 需要按实际修改
+User: 需要按实际修改
+Password: 需要按实际修改
 ```
 
 数据表结构：
@@ -186,10 +186,10 @@ CREATE TABLE IF NOT EXISTS ding_callback_configs (
 | 环境变量 | 说明 | 默认值 |
 |---------|------|-------|
 | PORT | 服务监听端口 | 3014 |
-| DB_HOST | 数据库主机地址 | 120.46.147.53 |
+| DB_HOST | 数据库主机地址 | 需要按实际修改|
 | DB_PORT | 数据库端口 | 5432 |
-| DB_NAME | 数据库名称 | pro_db |
-| DB_USER | 数据库用户名 | renoelis |
-| DB_PASSWORD | 数据库密码 | renoelis02@gmail.com |
+| DB_NAME | 数据库名称 | 需要按实际修改 |
+| DB_USER | 数据库用户名 | 需要按实际修改 |
+| DB_PASSWORD | 数据库密码 | 需要按实际修改 |
 
 在`docker-compose-ding_call_back.yml`文件中已经配置了这些环境变量，您可以根据需要修改它们。 
