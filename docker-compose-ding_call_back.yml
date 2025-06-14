@@ -7,11 +7,11 @@ services:
     restart: always
     environment:
       - PORT=3014
-      - DB_HOST=120.46.147.53
+      - DB_HOST=需要按实际修改
       - DB_PORT=5432
-      - DB_NAME=pro_db
-      - DB_USER=renoelis
-      - DB_PASSWORD=renoelis02@gmail.com
+      - DB_NAME=需要按实际修改
+      - DB_USER=需要按实际修改
+      - DB_PASSWORD=需要按实际修改
     logging:
       driver: "json-file"
       options:
